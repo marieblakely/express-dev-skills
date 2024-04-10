@@ -5,6 +5,6 @@ const router = Router()
 
 
 // GET localhost:3000/todos
-app.get('/', )
+router.get('/', devskillsCtrl.index)
 
 export { router }
