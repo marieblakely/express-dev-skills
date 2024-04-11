@@ -17,7 +17,21 @@ function newDevskill(req, res) {
   res.render('devskills/new')
 }
 
+function create(req, res) {
+  req.body.done = false
+  Devskill.create(req.body)
+  .then(devskill => {
+    res.redirect('devskills')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/devskills')
+  })
+}
+
+
 export {
   index,
   newDevskill as new,
+  create,
 }
