@@ -13,7 +13,11 @@ function index(req, res) {
   })
 }
 
+function newDevskill(req, res) {
+  res.render('devskills/new')
+}
 
 export {
   index,
+  newDevskill as new,
 }
