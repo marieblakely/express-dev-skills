@@ -7,10 +7,10 @@ function index(req, res) {
     devskills: devskills,
   })
 })
-.catch(error => { 
+  .catch(error => { 
   console.log(error)
-  res.redirect('/')
-})
+    res.redirect('/')
+  })
 }
 
 
