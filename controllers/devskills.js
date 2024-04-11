@@ -29,9 +29,22 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Devskill.findById(req.params.devskillId)
+  .then(devskill => {
+    res.render('devskills/show', {
+      devskill: devskill
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/devskills')
+  })
+}
 
 export {
   index,
   newDevskill as new,
   create,
+  show
 }

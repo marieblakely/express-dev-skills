@@ -11,4 +11,9 @@ router.get('/new', devskillsCtrl.new)
 
 router.post('/', devskillsCtrl.create)
 
+router.get('/:devskillId', devskillsCtrl.show)
+
+
+
+
 export { router }
