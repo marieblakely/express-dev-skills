@@ -1,10 +1,18 @@
-import { devskills } from '../data/devskill-data.js'
+import { Devskill } from '../models/devskill.js'
 
 function index(req, res) {
+  Devskill.find({})
+  .then(devskills => { 
   res.render('devskills/index', {
-    devskills: devskills
+    devskills: devskills,
   })
+})
+.catch(error => { 
+  console.log(error)
+  res.redirect('/')
+})
 }
+
 
 export {
   index,
