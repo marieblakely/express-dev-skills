@@ -54,10 +54,36 @@ function deleteDevskill(req, res){
   })
 }
 
+function edit(req, res){
+  Devskill.findById(req.params.devskillId)
+  .then(devskill => {
+    res.render('devskills/edit', {
+      devskill: devskill
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/devskills')
+  })
+}
+
+function update(req, res){
+  Devskill.findByIdandUpdate(req.params.devskillId, req.body, {new:true})
+  .then(devskill => {
+    res.redirect(`/devskills/${req.params.devskillId}`)
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/devskills')
+  })
+}
+
 export {
   index,
   newDevskill as new,
   create,
   show, 
   deleteDevskill as delete,
+  edit,
+  update,
 }
