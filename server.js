@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url'
 import createError from 'http-errors'
 import logger from 'morgan'
 // connect to the database with Mongoose
+import methodOverride from 'method-override'
 import './config/database.js'
 
 // import routers
@@ -33,6 +34,7 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
+app.use(methodOverride('_method'))
 
 // mount imported routes
 app.use('/', indexRouter)
