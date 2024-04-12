@@ -11,6 +11,8 @@ router.get('/new', devskillsCtrl.new)
 
 router.post('/', devskillsCtrl.create)
 
+router.delete('/:devskillId', devskillsCtrl.delete)
+
 router.get('/:devskillId', devskillsCtrl.show)
 
 
