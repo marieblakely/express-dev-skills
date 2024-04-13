@@ -9,7 +9,15 @@
   <h1>Edit Dev-Skill</h1>
   <form action="/devskills/<%= devskill._id %>?_method=PUT" method="POST" autocomplete="off">
     <input type="text" name="text" value="<%= devskill.text %>">
-    <button type="submit">Save Dev-Skill</button>
+    <select name="profiency">
+      <option value="<%= devskill.proficiency %>"selected><%= devskill.proficiency %>
+      </option>
+      <option value="<%= devskill.proficiency %>"selected><%= devskill.proficiency %>
+      </option>
+      <option value="<%= devskill.proficiency %>"selected><%= devskill.proficiency %>
+      </option>
+    </select>
+      <button type="submit">Save Dev-Skill</button>
   </form>
 </body>
 </html>
