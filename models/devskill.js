@@ -6,7 +6,7 @@ const Schema = mongoose.Schema
 
 const devskillSchema = new Schema({
   text: String,
-  done: Boolean
+  profiency: String,
 })
 
 const Devskill = mongoose.model('Devskill', devskillSchema)

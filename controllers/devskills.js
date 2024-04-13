@@ -68,7 +68,7 @@ function edit(req, res){
 }
 
 function update(req, res){
-  Devskill.findByIdandUpdate(req.params.devskillId, req.body, {new:true})
+  Devskill.findByIdAndUpdate(req.params.devskillId, req.body, {new:true})
   .then(devskill => {
     res.redirect(`/devskills/${req.params.devskillId}`)
   })

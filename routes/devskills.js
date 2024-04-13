@@ -17,7 +17,6 @@ router.post('/', devskillsCtrl.create)
 
 router.delete('/:devskillId', devskillsCtrl.delete)
 
-
 router.put('/:devskillId', devskillsCtrl.update)
 
 
